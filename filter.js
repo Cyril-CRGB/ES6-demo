@@ -60,12 +60,8 @@ const students = [
         ]
      },
  ];
-
- const hasStrokingSls.filter(student =>{
-    let strongSkills = student.skills.filter(skill => skill.yrexp >=5);
-    return strongSkills.length > 0;
- };
-  
-
-  const candidates = student });
-  console.log(candidates);
+ 
+ const has5yearsExp = skill => skill.yrexp >= 5;
+ const hasStrongSkills = student => student.skills.filter(has5yearsExp).length > 0;
+ const candidates = students.filter(hasStrongSkills);
+ console.log(candidates);
